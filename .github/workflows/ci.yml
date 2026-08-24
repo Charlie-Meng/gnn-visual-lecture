@@ -1,0 +1,36 @@
+name: Verify production build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            gcn-visual-lab/package-lock.json
+            graphsage-visual-lab/package-lock.json
+            gat-visual-lab/package-lock.json
+            gnn-interactive-deck/package-lock.json
+
+      - name: Build all applications
+        run: npm run ci:build
+
+      - name: Upload verified site
+        uses: actions/upload-artifact@v4
+        with:
+          name: gnn-visual-lecture-site
+          path: gnn-interactive-deck/dist
+          if-no-files-found: error

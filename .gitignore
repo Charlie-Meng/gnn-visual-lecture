@@ -1,0 +1,22 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/*.tsbuildinfo
+**/vite.config.js
+gnn-interactive-deck/public/labs/
+
+# Local authoring and generated material
+/.tmp/
+/output/
+/offline-release/
+/dmv-road-test-monitor/
+/AI_Papers_md/
+/*.pptx
+/*.pdf
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

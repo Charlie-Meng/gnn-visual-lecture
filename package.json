@@ -1,0 +1,15 @@
+{
+  "name": "gnn-visual-lecture",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:apps": "npm ci --prefix gcn-visual-lab && npm ci --prefix graphsage-visual-lab && npm ci --prefix gat-visual-lab && npm ci --prefix gnn-interactive-deck",
+    "build:labs": "npm run build --prefix gcn-visual-lab && npm run build --prefix graphsage-visual-lab && npm run build --prefix gat-visual-lab && node scripts/embed-visual-labs.mjs",
+    "build:deck": "npm run sync:labs --prefix gnn-interactive-deck && npm run build:site --prefix gnn-interactive-deck",
+    "build": "npm run build:labs && npm run build:deck",
+    "ci:build": "npm run install:apps && npm run build",
+    "dev": "npm run dev --prefix gnn-interactive-deck",
+    "preview": "npm run preview --prefix gnn-interactive-deck",
+    "package:offline": "npm run build && bash scripts/package-offline.sh"
+  }
+}

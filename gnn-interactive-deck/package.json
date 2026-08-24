@@ -1,0 +1,32 @@
+{
+  "name": "gnn-interactive-deck",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build:labs": "npm --prefix ../gcn-visual-lab run build && npm --prefix ../graphsage-visual-lab run build && npm --prefix ../gat-visual-lab run build && node ../scripts/embed-visual-labs.mjs",
+    "sync:labs": "node scripts/sync-labs.mjs",
+    "sync:slides": "node scripts/sync-slides.mjs",
+    "extract:notes": "python3 scripts/extract-notes.py",
+    "prepare:assets": "npm run build:labs && npm run sync:labs",
+    "build:site": "tsc -b && vite build && node scripts/generate-service-worker.mjs",
+    "dev": "npm run prepare:assets && vite --host 0.0.0.0 --port 4180",
+    "build": "npm run prepare:assets && npm run build:site",
+    "preview": "vite preview --host 0.0.0.0 --port 4180"
+  },
+  "dependencies": {
+    "katex": "^0.18.4",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/reveal.js": "^5.0.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5"
+  }
+}

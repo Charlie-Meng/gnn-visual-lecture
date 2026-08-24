@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Graph Neural Networks Visual Lecture">
+  <rect width="512" height="512" rx="88" fill="#18212a"/>
+  <g fill="none" stroke="#f4f6f3" stroke-width="20" stroke-linecap="round">
+    <path d="M145 164 256 105l111 59M145 164v132l111 63 111-63V164M145 296l111-65 111 65M256 105v126M256 231v128" opacity=".78"/>
+  </g>
+  <g stroke="#18212a" stroke-width="14">
+    <circle cx="256" cy="105" r="39" fill="#f2c14e"/>
+    <circle cx="145" cy="164" r="39" fill="#ef6a4a"/>
+    <circle cx="367" cy="164" r="39" fill="#16867d"/>
+    <circle cx="256" cy="231" r="47" fill="#f4f6f3"/>
+    <circle cx="145" cy="296" r="39" fill="#2c5d7c"/>
+    <circle cx="367" cy="296" r="39" fill="#ef6a4a"/>
+    <circle cx="256" cy="359" r="39" fill="#16867d"/>
+  </g>
+</svg>

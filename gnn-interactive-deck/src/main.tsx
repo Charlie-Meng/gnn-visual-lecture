@@ -1,0 +1,15 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "reveal.js/dist/reveal.css";
+import "katex/dist/katex.min.css";
+import "./styles.css";
+import { registerOfflineApp } from "./pwa";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
+
+registerOfflineApp();

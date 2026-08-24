@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "Graph Neural Networks Visual Lecture",
+  "short_name": "GNN Lecture",
+  "description": "An interactive visual lecture on GCN, GraphSAGE, and GAT.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#f4f6f3",
+  "theme_color": "#18212a",
+  "icons": [
+    {
+      "src": "./icons/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "productivity"]
+}
