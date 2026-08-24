@@ -12,21 +12,21 @@ export type SlideDefinition = {
 };
 
 const gcn = (scene: string, label: string): LiveScene => ({
-  src: `./labs/gcn/embedded.html?scene=${scene}&clean=1`,
+  src: `./labs/gcn/embedded/?scene=${scene}&clean=1`,
   model: "GCN",
   accent: "#244b67",
   label,
 });
 
 const sage = (scene: string, label: string): LiveScene => ({
-  src: `./labs/graphsage/embedded.html?scene=${scene}&clean=1`,
+  src: `./labs/graphsage/embedded/?scene=${scene}&clean=1`,
   model: "GraphSAGE",
   accent: "#e46445",
   label,
 });
 
 const gat = (scene: string, label: string): LiveScene => ({
-  src: `./labs/gat/embedded.html?scene=${scene}&clean=1`,
+  src: `./labs/gat/embedded/?scene=${scene}&clean=1`,
   model: "GAT",
   accent: "#087e72",
   label,

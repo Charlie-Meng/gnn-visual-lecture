@@ -16,9 +16,9 @@ await fs.mkdir(targetRoot, { recursive: true });
 
 for (const [targetName, sourceName] of labs) {
   const source = path.join(workspaceRoot, sourceName, "dist", "embedded.html");
-  const target = path.join(targetRoot, targetName);
+  const target = path.join(targetRoot, targetName, "embedded");
   await fs.mkdir(target, { recursive: true });
-  await fs.copyFile(source, path.join(target, "embedded.html"));
+  await fs.copyFile(source, path.join(target, "index.html"));
 }
 
 console.log(`Synced ${labs.length} self-contained Visual Labs into ${targetRoot}`);

@@ -19,4 +19,5 @@ gnn-interactive-deck/public/labs/
 Thumbs.db
 .idea/
 .vscode/
+.wrangler/
 *.log
